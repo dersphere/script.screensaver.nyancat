@@ -21,8 +21,6 @@ import xbmcaddon
 import xbmcgui
 import xbmc
 
-from thebigpictures import ScraperManager, ALL_SCRAPERS
-
 addon = xbmcaddon.Addon()
 addon_name = addon.getAddonInfo('name')
 addon_path = addon.getAddonInfo('path')
