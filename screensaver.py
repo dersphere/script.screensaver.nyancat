@@ -26,6 +26,9 @@ addon_name = addon.getAddonInfo('name')
 addon_path = addon.getAddonInfo('path')
 
 
+CONTROL_MOVING_BACKGROUND = 1
+
+
 class Screensaver(xbmcgui.WindowXMLDialog):
 
     class ExitMonitor(xbmc.Monitor):
@@ -38,6 +41,11 @@ class Screensaver(xbmcgui.WindowXMLDialog):
 
     def onInit(self):
         self.exit_monitor = self.ExitMonitor(self.exit)
+        self.handle_settings()
+
+    def handle_settings(self):
+        if addon.getSetting('moving_background') == 'true':
+            self.getControl(CONTROL_MOVING_BACKGROUND).setVisible(False)
 
     def exit(self):
         self.abort_requested = True
