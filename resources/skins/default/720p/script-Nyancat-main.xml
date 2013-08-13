@@ -26,6 +26,14 @@
             <texture>background.jpg</texture>
             <animation effect="slide" start="1280,0" end="0,0" center="auto" time="3000" loop="true" condition="!Control.IsVisible(1)">conditional</animation>
         </control>
+        <control type="image" id="2">
+            <description>Rainbow</description>
+            <posx>0</posx>
+            <posy>200</posy>
+            <width>480</width>
+            <height>320</height>
+            <texture>rainbow.gif</texture>
+        </control>
         <control type="image">
             <description>Nyan nyan nyan nyan nyan nyan nyan nyan nyan nyan nyan</description>
             <posx>320</posx>

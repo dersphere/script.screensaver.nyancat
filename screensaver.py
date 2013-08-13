@@ -27,6 +27,7 @@ addon_path = addon.getAddonInfo('path')
 
 
 CONTROL_MOVING_BACKGROUND = 1
+CONTROL_ANIMATED_RAINBOW = 2
 
 
 class Screensaver(xbmcgui.WindowXMLDialog):
@@ -46,6 +47,8 @@ class Screensaver(xbmcgui.WindowXMLDialog):
     def handle_settings(self):
         if addon.getSetting('moving_background') == 'true':
             self.getControl(CONTROL_MOVING_BACKGROUND).setVisible(False)
+        if not addon.getSetting('animated_rainbow') == 'true':
+            self.getControl(CONTROL_ANIMATED_RAINBOW).setVisible(False)
 
     def exit(self):
         self.abort_requested = True
